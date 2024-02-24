@@ -1,0 +1,26 @@
+diff --git a/dist/storage.cjs b/dist/storage.cjs
+index a5649b62ca3b84c8abd3723c3fb83f6d8291e630..4676dec5d58b2e1f9199b263d22697fc4924404f 100644
+--- a/dist/storage.cjs
++++ b/dist/storage.cjs
+@@ -306,7 +306,7 @@ function createStorage() {
+           { migratedValue }
+         );
+       };
+-      browser.runtime.onInstalled.addListener(async ({ reason }) => {
++      browser.runtime.onInstalled?.addListener(async ({ reason }) => {
+         if (reason !== "update")
+           return;
+         try {
+diff --git a/dist/storage.js b/dist/storage.js
+index a2fccde454722a381c9244ef3e29825e7ca8924a..11fb0d9203cbdebba451d94d8eb7af9eee6ae77b 100644
+--- a/dist/storage.js
++++ b/dist/storage.js
+@@ -269,7 +269,7 @@ function createStorage() {
+           { migratedValue }
+         );
+       };
+-      browser.runtime.onInstalled.addListener(async ({ reason }) => {
++      browser.runtime.onInstalled?.addListener(async ({ reason }) => {
+         if (reason !== "update")
+           return;
+         try {
